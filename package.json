@@ -1,0 +1,33 @@
+{
+  "name": "boletia_webservice",
+  "version": "1.0.0",
+  "description": "API with Express, Postgress and NodeJS to show, save, update the exchange rates",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://aikt: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@github.com/aikt/boletia_webservice.git"
+  },
+  "keywords": [],
+  "author": "Reynaldo Boletia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aikt/boletia_webservice/issues"
+  },
+  "homepage": "https://github.com/aikt/boletia_webservice#readme",
+  "dependencies": {
+    "aws-cloudwatch-log": "^0.1.2",
+    "aws-sdk": "^2.1148.0",
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "node-cron": "^3.0.0",
+    "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

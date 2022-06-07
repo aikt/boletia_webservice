@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  boletia_web:
+    build:
+      context: .
+    image: nodejs_image_boletia
+    container_name: nodejs_container_boletia
+    env_file: .env
+    environment:
+      DB_SCHEMA: postgres
+      DB_USER: boletia
+      DB_PASSWORD: password
+      DB_HOST: postgres
+      DB_DATABASE: boletia
+    depends_on:
+      - postgres
+    restart: always
+    ports:
+      - "3001:3000"
+    volumes:
+      - .:/usr/app
+      - /usr/app/node_modules
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: boletia
+      POSTGRES_PASSWORD: password
+    ports: 
+      - '5432:5432'
+    volumes:
+      - ./database/sql_file/db_boletia.sql:/docker-entrypoint-initdb.d/db_boletia.sql
