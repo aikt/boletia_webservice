@@ -63,6 +63,7 @@ Linea 23 => })
  - En la terminal ejecutar:
 
 ```sh
+npm install
 npx nodemon index.js
 ```
   - Visitar http://localhost:3000 y revisar si la respuesta es JSON
